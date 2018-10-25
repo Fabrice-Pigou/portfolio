@@ -1,0 +1,40 @@
+<!--/
+                      _   _        _a_a
+         _   _      _{.`=`.}_     {/ ''\_
+   _    {.`'`.}    {.   _   .}   {|  ._oo)
+  { \  {/ .-. \}  {/  .` `.  \}  {/  |
+~^~^`~^`~^`~^~`^~^~`^~^~^`~^~^~`^~^~^`~^~^~`~^~^~` www.goupy.eu 
+/-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><?= $title ?></title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="shortcut icon" href="/images/logo.png" />
+
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+
+	</head>
+
+	<body>
+		<header class="sticky-top p-0">
+			<?php require('../views/template/header.phtml'); ?>
+		</header>
+		<?= app\core\Flash::flash(); ?>
+
+		<?= $content ?>
+
+
+		<!-- <script src="https://code.jquery.com/jquery.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/event.js"></script> -->
+	</body>
+</html>

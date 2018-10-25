@@ -1,0 +1,12 @@
+<?php 
+ob_start();
+	$title = '';
+?>
+<main id="" class="container">
+	<h2></h2>
+
+</main>
+<?php
+$content = ob_get_clean();
+include(VIEW.'/template/template.phtml');
+?>

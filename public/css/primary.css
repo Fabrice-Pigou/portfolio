@@ -1,0 +1,30 @@
+*, *:before, *:after {}
+*:hover {transition: all .8s ease .2s;}
+
+/****************** Primary tag */
+html{}
+
+body {
+	font-size: 20px;
+	color: var(--color);
+	font-family: 'Slabo 27px', serif;
+	margin-bottom: 20px;
+}
+main{
+	margin-top: 10px;
+}
+
+ul {margin: 0; padding: 0; list-style: none;}
+li {list-style: none;}
+
+h2,h3,h4 {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: bold;
+}
+h4{
+	display: inline-block;
+}
+h1 {
+	font-family: 'Lobster', cursive;
+	margin: 0;
+}

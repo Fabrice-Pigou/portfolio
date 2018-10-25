@@ -1,0 +1,12 @@
+<?php
+ob_start();
+	$title = 'Mon micro frameWork';
+?>
+<main id="home" class="container">
+	<h2>Mes réalisation</h2>
+
+</main>
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

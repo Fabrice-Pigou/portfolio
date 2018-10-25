@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+/**
+ *	font-family: 'Lobster', cursive;
+ *	font-family: 'Merriweather', serif; 
+ *	font-family: 'Slabo 27px', serif;
+ **/
+
+@import "normalize.css";
+@import "primary.css";
+@import "base.css";
+@import "button.css";
+@import "form.css";
+@import "table.css";
+@import "content.css";
+
+
+/**
+*	Les couleur du site
+*/
+:root {
+	--primary-1: #155724;
+	--primary-2: #ff00ff;
+	--primary-3: #bf00bf;
+
+	--color: #333;
+}
+/* 
+ * Debug
+ */
+.xdebug-var-dump{
+	width: 80%;
+	margin: 15px auto;
+	background-color: #ddd;
+	border: 1px solid grey;
+	padding: 10px;
+	border-radius: 5px;
+}
+.debug{
+	margin: auto;
+	width: 100%;
+}
+.debug .xdebug-var-dump{
+	margin: 0;
+	width: 100%;
+}
+.xdebug-error{
+	margin: 0 auto;
+}
+
+pre.erreur{
+	white-space:pre-wrap;
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+	padding: 12px;
+	color: #F60;
+	background:#f5f5f5;
+}
+
+/**
+ *	Mode PC
+ */
+@media screen and (min-width:1024px) {
+	
+}

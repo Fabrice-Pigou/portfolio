@@ -1,0 +1,16 @@
+form{
+	max-width: 800px;
+	margin: auto;
+}
+input:not[type="submit"]{
+	min-width: 250px;
+}
+input#balance{
+	border: none;
+	background-color: transparent;
+	width: 100px;
+	text-align: right;
+}
+select{
+	min-width: 250px;
+}

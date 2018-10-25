@@ -1,0 +1,14 @@
+<?php
+$title = 'Erreur';
+ob_start();
+?>
+<h2 class="text-center"><a href="/home" class="link-1">Retour à la page d'accueil</a></h2>
+
+<div class="">
+    <p class="rouge text-center">
+        <pre class="erreur"><?= $e; ?></pre>
+    </p>
+<?php
+$content = ob_get_clean();
+include(VIEW.'/template/template.phtml');
+?>
