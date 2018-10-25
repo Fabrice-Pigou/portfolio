@@ -1,0 +1,18 @@
+<?php
+ob_start();
+	$title = 'Algoritme de Luhn';
+?>
+<main id="" class="container">
+	<h2 class="mt-4"><?= $title; ?></h2>
+	<form class="form form-lunh" action="" method="post">
+		<p>
+			<label class="text-center"for="luhn">Vérifier votre numéros de carte bancaire</label>
+			<?= $oForm->input('lunh'); ?>
+		</p>
+	</form>
+	<?php if (isset($message)) echo $message; ?>
+</main>
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

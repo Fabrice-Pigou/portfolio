@@ -3,8 +3,29 @@ ob_start();
 	$title = 'Mon micro frameWork';
 ?>
 <main id="home" class="container">
-	<h2>Mes réalisation</h2>
+	<section class="language">
+		<h2>Mes réalisation en PHP</h2>
+		<a class="model" href="/luhn">
+			<header class="model-head">
+				<h3 class="model-title">Algoritme de Luhn</h3>
+			</header>
+			<div class="model-content">
+				<img src="../images/mini/lunh.png" class="" width="100%" alt="Miniature">
+			</div>
+		</a>
+	</section>
 
+	<section class="language">
+		<h2>Mes réalisation en JavaScript</h2>
+		<a class="model">
+			<header class="model-head">
+				<h3 class="model-title">Snake</h3>
+			</header>
+			<div class="model-content">
+				<img src="../images/mini/panorama.jpg" class="" width="100%" alt="Miniature">
+			</div>
+		</a>
+	</section>
 </main>
 <?php
 $content = ob_get_clean();

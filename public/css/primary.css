@@ -2,16 +2,16 @@
 *:hover {transition: all .8s ease .2s;}
 
 /****************** Primary tag */
-html{}
+html{font-size: 62.5%;}
 
 body {
-	font-size: 20px;
+	font-size: 2rem;
 	color: var(--color);
 	font-family: 'Slabo 27px', serif;
-	margin-bottom: 20px;
 }
-main{
-	margin-top: 10px;
+main#home{
+	background: #f8f8f8;
+	padding: 15px 20px;
 }
 
 ul {margin: 0; padding: 0; list-style: none;}
@@ -21,10 +21,18 @@ h2,h3,h4 {
 	font-family: 'Merriweather', sans-serif;
 	font-weight: bold;
 }
-h4{
-	display: inline-block;
-}
 h1 {
 	font-family: 'Lobster', cursive;
 	margin: 0;
+	font-size: 4rem;
+}
+h2{
+	font-size: 3rem;
+	text-align: center;
+}
+h3{
+	font-size:2rem
+}
+h4{
+	display: inline-block;
 }

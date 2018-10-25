@@ -4,23 +4,23 @@ namespace app\core\html;
 class Form{
 
 	public function input($name, $type = 'text', $required='required') {
-		
+
 		$value = isset($_POST[$name]) ? $_POST[$name]: '';
 
-		return '<input class="form-control form-control-sm" 
-			type="'. $type .'" 
-			id="'. $name .'" 
-			name="'. $name .'" 
-			value="'. $value .'" 
+		return '<input class="form-control form-control-lg"
+			type="'. $type .'"
+			id="'. $name .'"
+			name="'. $name .'"
+			value="'. $value .'"
 			'. $required .'
 		>';
 	}
 
 	public function textarea($name, $row = 5){
 		$value = isset($_POST[$name]) ? $_POST[$name]: '';
-		return '<textarea class="form-control form-control-sm" 
+		return '<textarea class="form-control form-control-sm"
 			name="'. $name .'" i
-			d="'. $name .'" 
+			d="'. $name .'"
 			rows="'. $row .'"
 		>'. $value .'</textarea>';
 
@@ -42,12 +42,11 @@ class Form{
 		return $select;
 	}
 
-	public function day($day){
-
-
+	public function day($day)
+	{
 		$select = '<select class="form-control form-control-sm" name="' . $day . '" id="' . $day  . '">';
 		$select .= '<option value="0" >Choisir...</option>';
-		for ($i=1; $i <= 31; $i++) { 
+		for ($i=1; $i <= 31; $i++) {
 			$selected ='';
 			if (isset($_POST[$day]) AND $_POST[$day]== $i) $selected ='selected';
 			$select .= '<option value="' . $i . '" ' . $selected . '>' .$i . '</option>';

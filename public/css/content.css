@@ -1,3 +1,16 @@
-table#entries-month td.info{
-	line-height: 1.3rem;
+.language{
+    display: flex;
+    flex-wrap: wrap;
+}
+.language h2{
+    flex-basis: 100%;
+}
+a.model{
+    flex-basis: 33.33%;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--color);
+}
+div.model-content{
+    border:5px solid #fff;
 }

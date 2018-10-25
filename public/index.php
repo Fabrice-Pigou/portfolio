@@ -13,9 +13,9 @@ AutoLoader::register();
 
 if (!isset($_GET['page'])) $_GET['page'] = 'home';
 
-if (is_file('../controllers/'.$_GET['page'].'_controller.php'))
+if (is_file('../controllers/'.$_GET['page'].'.controller.php'))
 {
-	include '../controllers/'.$_GET['page'].'_controller.php';
+	include '../controllers/'.$_GET['page'].'.controller.php';
 }
 else
 {
