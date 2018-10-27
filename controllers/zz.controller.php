@@ -1,6 +1,4 @@
 <?php
-use \app\core\html\Form;
-use \app\core\Flash;
 
 $oForm = new Form;
 

@@ -1,5 +1,5 @@
 <?php
-namespace app\core;
+namespace src\core;
 
 class Flash
 {
@@ -22,5 +22,5 @@ class Flash
 
 }
 
-// use \app\core\Flash;
+// use \src\core\Flash;
 // Flash::setFlash('la marque est déja utilisée', 'alert');

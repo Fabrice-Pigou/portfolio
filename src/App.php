@@ -1,6 +1,6 @@
 <?php
-namespace app;
-use \app\core\Database;
+namespace src;
+use \src\core\Database;
 
 class App
 	{

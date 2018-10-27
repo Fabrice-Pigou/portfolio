@@ -14,8 +14,7 @@ main#home{
 	padding: 15px 20px;
 }
 
-ul {margin: 0; padding: 0; list-style: none;}
-li {list-style: none;}
+ul {margin: 0; padding: 0;}
 
 h2,h3,h4 {
 	font-family: 'Merriweather', sans-serif;
@@ -34,5 +33,5 @@ h3{
 	font-size:2rem
 }
 h4{
-	display: inline-block;
+	
 }

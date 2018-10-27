@@ -1,5 +1,5 @@
-<?php 
-namespace app\core;
+<?php
+namespace src\core;
 
 class Goupy
 {
@@ -39,4 +39,4 @@ class Goupy
 		}
 		return $month;
 	}
-} 
+}

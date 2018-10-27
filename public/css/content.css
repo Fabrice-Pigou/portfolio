@@ -12,5 +12,24 @@ a.model{
     color: var(--color);
 }
 div.model-content{
-    border:5px solid #fff;
+    border:5px solid #aaa;
+    border-radius: 8px;
+}
+div.model-content img{
+    border-radius: 8px;
+}
+.luth-detail{
+    max-width: 600px;
+    margin : 0 auto 30px;
+}
+.lunh-num+.lunh-num:before{
+    content: ".";
+    font-weight: normal;
+}
+.lunh-result{
+    border: 1px solid silver;
+    display: inline-block;
+    padding: 0 15px;
+    border-radius: 5px;
+    text-align: center;
 }

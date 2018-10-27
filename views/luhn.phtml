@@ -4,13 +4,75 @@ ob_start();
 ?>
 <main id="" class="container">
 	<h2 class="mt-4"><?= $title; ?></h2>
+	<p>
+		En mathématiques et plus précisément en arithmétique modulaire, la formule de Luhn est utilisée pour ses applications
+		en cryptologie. <br>
+		L'algorithme de Luhn, ou code de Luhn, ou encore formule de Luhn est aussi connu comme l'algorithme « modulo 10 »
+		ou « mod 10 ». <br>
+		C'est une simple formule de somme de contrôle (checksum) utilisée pour valider une variété de numéros de comptes,
+		comme les numéros de cartes bancaires, les numéros d'assurance sociale canadiens, les numéros IMEI des téléphones
+		mobiles ainsi que pour le calcul de validité d'un numéro SIRET.
+	</p>
 	<form class="form form-lunh" action="" method="post">
 		<p>
-			<label class="text-center"for="luhn">Vérifier votre numéros de carte bancaire</label>
+			<label class="text-center"for="luhn">Vérifier un nombre</label>
 			<?= $oForm->input('lunh'); ?>
 		</p>
 	</form>
-	<?php if (isset($message)) echo $message; ?>
+<?php
+			if (isset($message)){
+?>
+				<h2 class="mt-5">Détail de l'algoritme</h2>
+				<section class="luth-detail">
+					<h3>On inverse les chiffres et on transforme en array</h3>
+					<p class="lunh-result">
+<?php
+						$aNum = str_split(strrev($_POST['lunh']));
+						foreach ($aNum as $num):
+							echo '<span class="lunh-num">'. $num .'</span>';
+						endforeach;
+?>
+					</p>
+					<h3>On double la valeur de tous les chiffres de rang pair</h3>
+					<p class="lunh-result">
+<?php
+						foreach ($aNum as $key => $value):
+							if ($key %2 == 1){
+								$value *= 2;
+								$aNum[$key]= $value;
+								echo '<strong class="lunh-num">'. $value .'</strong>';
+							}
+							else echo '<span class="lunh-num">'. $value .'</span>';
+						endforeach;
+?>
+					</p>
+
+					<h3>Si le double d'un chiffre dépasse 9, on lui soustrais 9</h3>
+					<p class="lunh-result">
+<?php
+						foreach ($aNum as $key => $value):
+							if ($value > 9) {
+								$value -= 9;
+								$aNum[$key]= $value;
+								echo '<strong class="lunh-num">'. $value .'</strong>';
+							}
+							else echo '<span class="lunh-num">'. $value .'</span>';
+						endforeach;
+?>
+					</p>
+					<h3>On additionne ensemble tous les chiffres</h3>
+<?php
+					$total = 0;
+					foreach ($aNum as $num) $total += $num;
+					echo '<p class="lunh-result">'. $total .'</p>';
+?>
+					<h3>Si le total est un multiple de 10 (le chiffre des unités est un zéro), alors le nombre est valide</h3>
+					<p class="lunh-result">Résultat: <?= $lunh; ?></p>
+					<?= $message; ?>
+				</section>
+<?php
+			}
+?>
 </main>
 <?php
 $content = ob_get_clean();

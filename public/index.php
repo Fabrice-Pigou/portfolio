@@ -2,13 +2,13 @@
 ini_set('display_errors',1);
 session_start();
 
-use \app\AutoLoader;
-use \app\App;
+use \src\AutoLoader;
+use \src\App;
 
 /**
  * Appel de l'autoloader
  */
-require dirname(__DIR__).'/app/autoloader.php';
+require dirname(__DIR__).'/src/autoloader.php';
 AutoLoader::register();
 
 if (!isset($_GET['page'])) $_GET['page'] = 'home';
