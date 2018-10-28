@@ -1,0 +1,12 @@
+<?php
+ob_start();
+	$title = 'Snake';
+?>
+<main id="" class="container">
+	<h2><?= $title; ?></h2>
+
+</main>
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>
