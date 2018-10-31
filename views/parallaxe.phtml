@@ -1,0 +1,54 @@
+<?php
+$css='<link rel="stylesheet" href="/css/parallaxe.css">';
+ob_start();
+	$title = 'Effet parallaxe';
+?>
+<main id="" class="">
+	<!-- éléments cachés pour jouer avec :target -->
+<span id="s1"></span>
+<span id="s2"></span>
+<span id="s3"></span>
+
+<!-- Le gros conteneur qui va glisser -->
+<div id="wrap">
+
+	<!-- La navigation -->
+	<ul id="nav">
+		<li><a href="#s1">Le fiasco</a></li>
+		<li><a href="#s2">Ingrédients</a></li>
+		<li><a href="#s3">Credits</a></li>
+	</ul>
+
+	<!-- La slide 1 -->
+	<div id="slide1">
+		<div class="slide_inside">
+			<!-- Le logo -->
+			<h1><img src="images/parallaxe/logo.png" alt="Restaurant le Fiasco"></h1>
+		</div> <!-- /.slide_inside-->
+	</div> <!-- /#slide1 -->
+
+	<!-- La slide 2 -->
+	<div id="slide2">
+		<div class="slide_inside">
+			<!-- Les deux éléments en 1er plan -->
+			<!-- Mettez ici les images que vous voulez 🙂 -->
+			<img src="images/parallaxe/burger1.png" id="burger1" alt="Burger">
+			<img src="images/parallaxe/burger2.png" id="burger2" alt="Burger">
+
+			<h2>Tout nos ingrédients sont frais</h2>
+		</div> <!-- /.slide_inside-->
+	</div> <!-- /#slide2 -->
+
+	<!-- La slide 2 -->
+	<div id="slide3">
+		<div class="slide_inside">
+			<h2>Credits</h2>
+			[…]
+		</div> <!-- /.slide_inside-->
+	</div> <!--  /#slide3 -->
+</div>
+</main>
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

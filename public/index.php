@@ -2,6 +2,7 @@
 ini_set('display_errors',1);
 session_start();
 $script='';
+$css='';
 use \src\AutoLoader;
 use \src\App;
 
