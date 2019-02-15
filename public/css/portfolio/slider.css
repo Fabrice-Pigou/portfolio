@@ -1,0 +1,16 @@
+.slideshow {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+ }
+ 
+ .slideshow ul {
+     /* 4 images donc 4 x 100% */
+    width: 400%;
+    height: 400px;
+    padding:0; margin:0;
+    list-style: none;
+ }
+ .slideshow li {
+    float: left;
+ }

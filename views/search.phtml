@@ -1,0 +1,27 @@
+<?php
+ob_start();
+	$title = 'Mon super moteur de recherche';
+?>
+<main id="" class="container">
+	<h2><?= $title; ?></h2>
+	<form class="form-search">
+		<input 
+			class=""
+			id="search" 
+			type="search" 
+			name="search" 
+			placeholder="Recherche" 
+			aria-label="Search">
+		<div class="resultat"><ul></ul></div>
+	</form>
+	<?php if (isset($search) && !empty($search)): ?>
+		<article class="article-search">
+			<h3><?= hh($search['name']); ?></h3>
+			<p><?= nh($search['resume']); ?></p>
+		</article>
+	<?php endif ?>
+</main>
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

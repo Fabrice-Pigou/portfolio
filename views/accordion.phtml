@@ -1,0 +1,63 @@
+<?php
+ob_start();
+	$title = 'Effet accordéon';
+?>
+<main id="" class="container">
+	<h2><?= $title; ?></h2>
+	<div class="accordion">
+	<ul>
+		 <li>
+			<input type="radio" name="select" class="accordion-select" checked />
+			<div class="accordion-title">
+				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+			</div>
+			<div class="accordion-content">
+				
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus neque lectus, in ultricies tortor placerat posuere. Vestibulum congue porta consectetur. Curabitur auctor efficitur mollis. Nullam sollicitudin velit vulputate velit feugiat, et maximus ligula eleifend. Vivamus posuere ullamcorper est in rhoncus. Donec eleifend metus a porta tempor. Aliquam commodo nulla vel quam sagittis rutrum.
+			</div>
+			<div class="accordion-separator"></div>
+		</li> 
+		 <li>
+			<input type="radio" name="select" class="accordion-select" />
+			<div class="accordion-title">
+				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+			</div>
+			<div class="accordion-content">
+				
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus neque lectus, in ultricies tortor placerat posuere. Vestibulum congue porta consectetur. Curabitur auctor efficitur mollis. Nullam sollicitudin velit vulputate velit feugiat, et maximus ligula eleifend. Vivamus posuere ullamcorper est in rhoncus. Donec eleifend metus a porta tempor. Aliquam commodo nulla vel quam sagittis rutrum.
+			</div>
+			<div class="accordion-separator"></div>
+		</li> 
+		 <li>
+			<input type="radio" name="select" class="accordion-select" />
+			<div class="accordion-title">
+				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+			</div>
+			<div class="accordion-content">
+				
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus neque lectus, in ultricies tortor placerat posuere. Vestibulum congue porta consectetur. Curabitur auctor efficitur mollis. Nullam sollicitudin velit vulputate velit feugiat, et maximus ligula eleifend. Vivamus posuere ullamcorper est in rhoncus. Donec eleifend metus a porta tempor. Aliquam commodo nulla vel quam sagittis rutrum.
+			</div>
+			<div class="accordion-separator"></div>
+		</li> 
+		 <li>
+			<input type="radio" name="select" class="accordion-select" />
+			<div class="accordion-title">
+				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+			</div>
+			<div class="accordion-content">
+				
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus neque lectus, in ultricies tortor placerat posuere. Vestibulum congue porta consectetur. Curabitur auctor efficitur mollis. Nullam sollicitudin velit vulputate velit feugiat, et maximus ligula eleifend. Vivamus posuere ullamcorper est in rhoncus. Donec eleifend metus a porta tempor. Aliquam commodo nulla vel quam sagittis rutrum.
+			</div>
+			<div class="accordion-separator"></div>
+		</li> 
+	</ul>
+</div> 
+</main>
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

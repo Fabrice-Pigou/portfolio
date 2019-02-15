@@ -9,6 +9,7 @@ use \src\App;
 /**
  * Appel de l'autoloader
  */
+require dirname(__DIR__).'/src/boot.php';
 require dirname(__DIR__).'/src/autoloader.php';
 AutoLoader::register();
 

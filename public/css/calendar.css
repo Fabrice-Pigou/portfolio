@@ -1,0 +1,122 @@
+.main-calendar{
+	padding: 0 5px 5px;
+}
+.main-calendar h2{
+	padding-bottom: 5px;
+}
+.calendar-header{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+.calendar-nav{
+	background-color: #27333d;
+	border-radius: 7px;
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: bold;
+	padding: 2px 15px 0;
+	display: inline-block;
+}
+.calendar-nav:hover{
+	box-shadow: 2px 2px 5px grey;
+	opacity: .9;
+}
+.calendar-nav+.calendar-nav{
+	margin-right: 10px;
+}
+.calendar-table{
+	width: 100%;
+	height: calc(100vh - 140px);
+}
+.calendar-table td{
+	width: 14.28%;
+	border: 1px solid #aaa;
+	vertical-align: top;
+	padding: 10px;
+	height: 20%;
+}
+.calendar-table-6-weeks td{
+	height:	16.66%;
+}
+.calendar-weekday{
+	font-weight: bold;
+	color: #000;
+}
+.calendar-othermonth .calendar-day{
+	opacity: .3;
+}
+.calendar-add{
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: #27333d;
+	color: #fff;
+	font-weight: bold;
+	font-size: 3rem;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+}
+.calendar-add:hover{
+	transform: scale(1.2);
+	box-shadow: 2px 2px 5px grey;
+}
+.calendar-event{
+	font-size: 1.6rem;
+}
+.calendar-link:hover{
+	text-decoration: underline;
+}
+.form-add{
+	width: 900px;
+	margin: auto;
+}
+.form-add label{
+	text-align: center;
+}
+.form-add input:not([type="submit"]){
+	width: 95%;
+}
+.form-add textarea{
+	width: 100%;
+}
+.form-add div.flex-2 p{
+	width: 50%;
+}
+.calendar-action{
+	float: right;
+	font-size: 2.5rem;
+	padding-top: 5px;
+}
+#event ul{
+	list-style-type: none;
+}
+.calendar-a{
+	box-shadow: inset 0px 1px 0px 0px #97c4fe;
+	background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0',GradientType=0);
+	background-color :#3d94f6;
+	border-radius: 6px;
+	border: 1px solid #337fed;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 2rem;
+	padding: 5px 24px;
+	text-decoration: none;
+}
+.calendar-a:hover{
+	background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6',GradientType=0);
+	background-color: #1e62d0;
+}
+.calendar-action a+.calendar-action a{
+	margin-right: 15px;
+}
+.calendar-action+h2:after{
+	display: block;
+	content: '';
+	clear: both;
+}

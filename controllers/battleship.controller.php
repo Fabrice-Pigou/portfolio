@@ -1,5 +1,4 @@
 <?php
-$oBattleship = new src\Battleship;
+$script = '<script type="text/javascript" src="js/battleship/boot.js"></script>';
 
-
-include ../views/battleship.phtml';
+include '../views/battleship.phtml';

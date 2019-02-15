@@ -1,0 +1,51 @@
+<?php
+ob_start();
+	$title = 'Mon calendrier';
+?>
+<main id="calendar" class="main-calendar">
+	<header class="calendar-header">
+		<h2><?= $dateMonthYear; ?></h2>
+		<div>
+			<a class="calendar-nav" href="/calendar/<?= $oCalendar->previousMonth()->year .'-'. $oCalendar->previousMonth()->month; ?>">
+				<i class="fas fa-arrow-left"></i>
+			</a>
+			<a class="calendar-nav" href="/calendar/<?= $oCalendar->nextMonth()->year .'-'. $oCalendar->nextMonth()->month; ?>">
+				<i class="fas fa-arrow-right"></i>
+			</a>
+		</div>
+	</header>
+
+	<table class="calendar-table calendar-table-<?= $weeks; ?>-weeks">
+		<tbody>
+			<?php for ($i=0; $i < $weeks; $i++):?>
+				<tr>
+					<?php				
+					foreach ($oCalendar->days as $k => $day): 
+						$date = $start->modify($k + $i * 7 .'days');
+						$events = $aEvents[$date->format('Y-m-d')] ?? [];
+						?>
+						<td class="<?= $oCalendar->inMonth($date) ? '' : 'calendar-othermonth'; ?>">
+							<?php if ($i === 0): ?>
+								<div class="calendar-weekday"><?= $day; ?></div>
+							<?php endif; ?>
+							<div class="calendar-day"><?= $date->format('d'); ?></div>
+							<?php foreach ($events as $event): ?>
+								<div class="calendar-event">
+									<?= (new dateTime($event['start']))->format('H:i'); ?> -
+									<a class="calendar-link" href="/event-<?= $event['id']; ?>"><?= nh($event['name']); ?></a>
+								</div>
+							<?php endforeach; ?>
+						</td>
+					<?php endforeach; ?>
+				</tr>
+			<?php endfor; ?>
+		</tbody>
+	</table>
+	<a	class="calendar-add" 
+		href="/add" 
+		title="Ajouter un évènement">+</a>
+</main>
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

@@ -1,4 +1,4 @@
 <?php
-$script = '<script type="text/javascript" src="js/snake.js"></script>';
+$script = '<script type="text/javascript" src="js/snake/snake.js"></script>';
 
 include '../views/snake.phtml';

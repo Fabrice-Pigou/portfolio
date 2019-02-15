@@ -13,7 +13,9 @@ main#home{
 	background: #f8f8f8;
 	padding: 15px 20px;
 }
-
+a{
+	color: inherit;
+}
 ul {margin: 0; padding: 0;}
 
 h2,h3,h4 {

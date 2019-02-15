@@ -1,3 +1,3 @@
 <?php
 
-include ../views/zzzzz.phtml';
+include '../views/zzzzz.phtml';

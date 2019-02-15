@@ -1,0 +1,41 @@
+<?php
+ob_start();
+	$title = 'Ajouter/Modifier un évenement';
+?>
+<main id="article" class="article-container">
+	<h2 class="text-center"><?= $title; ?></h2>
+	<form class="form-add" 	action="" method="post">
+	<div class="flex-2">
+			<p class="">
+				<label for="name">Nom de l'évènement</label>
+				<?= $oForm->input('name'); ?>
+			</p>
+			<p class="">
+				<label for="day">Jour de l'évènement</label>
+				<?= $oForm->input('day', 'date'); ?>
+			</p>
+		</div>
+		<div class="flex-2">
+			<p class="">
+				<label for="name">Début de l'évènement</label>
+				<?= $oForm->input('start', 'time'); ?>
+			</p>
+			<p class="">
+				<label for="day">Fin de l'évènement</label>
+				<?= $oForm->input('end', 'time'); ?>
+			</p>
+		</div>
+		<p>
+			<label for="day">Description de l'évènement</label>
+			<?= $oForm->textarea('description'); ?>
+		</p>
+		<p>
+			<?= $oForm->input('id', 'hidden'); ?>
+			<input type="submit" value="Envoyer">
+		</p>
+	</form>
+</main>
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

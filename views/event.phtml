@@ -1,0 +1,37 @@
+<?php
+ob_start();
+	$title = hh($event['name']);
+?>
+<main class="container" id="event">
+	<section>
+		<div class="calendar-action">
+			<a	class="calendar-a"
+				title="Modifier"
+				href="/add/edit-<?= $event['id']; ?>">
+				<i class="far fa-edit"></i>
+			</a>
+			<a	class="calendar-a"
+				title="Supprimer"
+				href="/event/delete-<?= $event['id']; ?>"
+				onclick="return confirm
+					('L\'évènement va être supprimé définitivement!')">
+				<i class="far fa-trash-alt"></i>
+			</a>
+		</div>
+		<h2 class="w-100"><?= $title; ?></h2>
+	</section>
+	<ul>
+		<li>Date: <?= (new DateTime($event['start']))->format('d/m/Y'); ?></li>
+		<li>Heure de démarrage: <?= (new DateTime($event['start']))->format('H:i'); ?></li>
+		<li>Heure de fin: <?= (new DateTime($event['end']))->format('H:i'); ?></li>
+		<li>
+			Description: <br>
+			<?= nh($event['description']); ?>
+		</li>
+	</ul>
+	<a class="calendar-a" href="/calendar">Retour au calendrier</a>
+</main>
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

@@ -67,14 +67,12 @@ window.onload = function() {
         ctx.fillStyle = "#000";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.strokeStyle = "white";
+        ctx.fillStyle = "white";
         ctx.lineWidth = 5;
         var centreX = canvasWidth / 2;
         var centreY = canvasHeight / 2;
-        ctx.strokeText("Game Over", centreX, centreY - 180);
         ctx.fillText("Game Over", centreX, centreY - 180);
         ctx.font = "bold 20px sans-serif"
-        ctx.strokeText("Appuyer sur la touche Espace pour rejouer", centreX, centreY - 120)
         ctx.fillText("Appuyer sur la touche Espace pour rejouer", centreX, centreY - 120)
         ctx.restore();
     }
