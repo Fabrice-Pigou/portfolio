@@ -1,67 +1,85 @@
 main {
-	margin: 70px 0 0 0;
-    padding: 0; /* annulation des marges */
-	overflow: hidden; /* on cache le débordement de contenu */
-	color: #fff;
-	background: #000;
-	height: calc(100vh - 134px);
+	margin: 0;
+	padding: 0;
+	color:#fff;
+	font: normal 90% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
+
+}
+h2 {
+	margin-top:0;
+	font-size: 2em;
+	font-weight:bold;
+	color: #ffffff;
+}
+
+a {
+	font-weight:bold;
+	color:#fff;
 }
 
 #wrap {
-	/* position du conteneur pour le préparer à bouger */
 	position: relative;
-	top: 0;
-	/* on prépare la transition à venir */
+	top:0;
+	-webkit-transition: top 1.4s cubic-bezier(.49,.22,.52,1);
+	-moz-transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
+	-ms-transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
+	-o-transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
 	transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
 }
 
 #nav {
-	/* on fixe le menu en haut */
 	position: fixed;
-	top: 64px; left: 0; right: 0;
-	padding: 1em 0;
-	margin: 0;
-	/* on centre les liens */
-	text-align: center;
-	background: #000;
+	top: 64px; left:0; right: 0;
+	padding: 1rem 0;
+	margin:0;
+	text-align:center;
+	background-color: #343a40;
+	width: 900px;
+	font-size: 1em;
+	z-index:10;
+	margin: 0 auto;
+	border-radius: 0 0 7px 7px;
 }
 #nav li {
-	/* on aligne les éléments de liste */
 	display: inline;
 	margin:0;
 }
 #nav a {
-	/* on applique des marges aux liens */
 	display: inline-block;
 	margin: 0 3em;
 	color: #eee;
-	/* on applique une petite lueur */
-	text-shadow: 0 0 5px #fff;
-	/* on prévoit une petite transition (lueur) */
+	text-transform: uppercase;
+	text-decoration: none;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
 	transition: all 1s;
 }
-/* slides */
+
 #slide1, #slide2, #slide3 {
-	/* height à adapter avec media queries */
-	height: 1000px;
-	padding-top:100px;
-	/* préparation des transitions */
+	height: 1100px;
+	padding-top:150px;
+	-webkit-transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1);
+	-moz-transition: background-position 1.4s cubic-bezier(.49,.22,.52,1.35);
+	-ms-transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);
+	-o-transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);
 	transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);
 }
-/* attribution des images de fond */
-#slide1 {
-	background:url(/images/parallaxe/slide1-bg.jpg) center 0 no-repeat fixed;
-	background-size: cover;}
-#slide2 {
-	background: url(/images/parallaxe/slide2-bg.jpg) center 0 no-repeat fixed;
+
+#slide1 { 
+	background:url(/images/parallaxe/slide-1.jpg) center 0 no-repeat fixed; 
 	background-size: cover;
 }
-#slide3 {
-	background: url(/images/parallaxe/slide3-bg.jpg) center 0 no-repeat fixed;
+#slide2 { 
+	background: url(/images/parallaxe/slide-2.jpg) center 0 no-repeat fixed; 
+	background-size: cover;
+}
+#slide3 { 
+	background: url(/images/parallaxe/slide-3.jpg) center 0 no-repeat fixed;
 	background-size: cover;
 }
 
-/* Contenus des slides */
 .slide_inside {
 	width: 770px;
 	margin: 0 auto;
@@ -74,74 +92,28 @@ main {
 	text-align: center;
 	background-color: transparent;
 }
-#slide2 .slide_inside {
-    margin-top: 10px;
-}
 #slide2 .slide_inside p {
-	width: 500px;
 	text-align: justify;
 }
 #slide3 .slide_inside {
-	margin-top: 200px;
-}
-/* positionnement des personnages animés */
-#burger2, #burger1 {
-	position: absolute;
-	left:-180px; top: 300px;
-	/* on tourne légèrement les images */
-	transform: rotate(10deg);
-	/* et on prévoit une transition */
-	transition: all 1.4s cubic-bezier(.49,.22,.52,1);
-}
-/* positionnement différé d'un des 2 personnages */
-#burger1 {
-	left: -280px;
-	top: 400px;
+	margin-top: 50px;
 }
 
-/* décalage du conteneur vers le haut */
-#s2:target ~ #wrap {
-	top:-1000px;
-}
+#s1:target ~ #wrap { top:0px; }
+#s1:target ~ #wrap #nav li:first-child a { text-shadow: 0 0 5px white;}
+#s1:target ~ #wrap #slide1 { background-position: 50% 0%; }
+#s1:target ~ #wrap #slide2 { background-position: 50% -35%; }
+#s1:target ~ #wrap #slide3 { background-position: 50% -60%; }
 
-/* décalage des fonds de chaque slide */
+#s2:target ~ #wrap { top:-1100px; }
+#s2:target ~ #wrap #nav li:first-child + li a { text-shadow: 0 0 5px white;}
 #s2:target ~ #wrap #slide1 { background-position: 50% 36%; }
 #s2:target ~ #wrap #slide2 { background-position: 50% 0%; }
 #s2:target ~ #wrap #slide3 { background-position: 50% -30%; }
 
-/* mouvements d'un des personnages */
-#s2:target ~ #wrap #burger2 {
-	left: -100px;
-	top: -80px;
-	transform: rotate(-7deg);
-}
 
-/* mouvements de l'autre personnage */
-#s2:target ~ #wrap #burger1 {
-	left: -250px;
-	top: 150px;
-	transform: rotate(0deg);
-}
-
-/* juste pour la déco (lueur sur le lien cliqué) */
-#s2:target ~ #wrap #nav li:first-child + li a {
-	text-shadow: 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603;
-}
-
-/* vers Slide 1 */
-#s1:target ~ #wrap { top:0px; }
-#s1:target ~ #wrap #nav li:first-child a { text-shadow: 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603; }
-#s1:target ~ #wrap #slide1 { background-position: 50% 0%; }
-#s1:target ~ #wrap #slide2 { background-position: 50% -35%; }
-#s1:target ~ #wrap #slide3 { background-position: 50% -60%; }
-#s1:target ~ #wrap #burger2 { left: -180px; top: 300px; transform: rotate(10deg); }
-#s1:target ~ #wrap #burger1 { left: -280px; top: 300px; transform: rotate(10deg); }
-
-/* vers Slide 3 */
-#s3:target ~ #wrap { top:-2150px; }
-#s3:target ~ #wrap #nav li:last-child a { text-shadow: 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603, 0 0 5px #eca603; }
+#s3:target ~ #wrap { top:-2200px; }
+#s3:target ~ #wrap #nav li:last-child a { text-shadow: 0 0 5px white;}
 #s3:target ~ #wrap #slide1 { background-position: 50% 60%; }
 #s3:target ~ #wrap #slide2 { background-position: 50% 35%; }
 #s3:target ~ #wrap #slide3 { background-position: 50% 0%; }
-#s3:target ~ #wrap #burger2 { left:-1500px;top:-1000px; transform: rotate(-15deg); }
-#s3:target ~ #wrap #burger1 { left:-1000px;top: -800px; transform: rotate(-15deg); }
