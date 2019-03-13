@@ -1,5 +1,4 @@
-*, *:before, *:after {}
-*:hover {transition: all .8s ease .2s;}
+*, *:before, *:after {box-sizing: border-box;}
 
 /****************** Primary tag */
 html{font-size: 62.5%;}
@@ -16,6 +15,7 @@ main#home{
 a{
 	color: inherit;
 }
+a:hover {transition: all .8s ease .2s;}
 ul {margin: 0; padding: 0;}
 
 h2,h3,h4 {
@@ -33,7 +33,4 @@ h2{
 }
 h3{
 	font-size:2rem
-}
-h4{
-	
 }

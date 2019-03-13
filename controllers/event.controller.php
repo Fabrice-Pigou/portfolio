@@ -3,7 +3,7 @@ use \src\app\sql\Events;
 use \src\core\Flash;
 
 $oEvents = new Events();
-$css='<link rel="stylesheet" href="/css/calendar.css">';
+$css='<link rel="stylesheet" href="/css/portfolio/calendar.css">';
 
 if (isset($_GET['action']) && $_GET['action'] === 'delete') {
 	$oEvents->delete($_GET['id']);

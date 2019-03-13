@@ -3,16 +3,15 @@ namespace src\core\html;
 
 class Form{
 
-	public function input($name, $type = 'text', $required='required') {
+	public function input($name, $value='', $type = 'text') {
 
-		$value = isset($_POST[$name]) ? $_POST[$name]: '';
+		$value = isset($_POST[$name]) ? $_POST[$name]: $value;
 
 		return '<input class="form-control form-control-lg"
 			type="'. $type .'"
 			id="'. $name .'"
 			name="'. $name .'"
 			value="'. $value .'"
-			'. $required .'
 		>';
 	}
 

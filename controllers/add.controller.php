@@ -5,7 +5,7 @@ use \src\core\Flash;
 
 $oEvents = new Events;
 $oForm = new Form();
-$css='<link rel="stylesheet" href="/css/calendar.css">';
+$css='<link rel="stylesheet" href="/css/portfolio/calendar.css">';
 if (!isset($_POST['id'])) $_POST['id'] = 0;
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){

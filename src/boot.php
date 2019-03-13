@@ -17,3 +17,28 @@ function hh(string $value){
 	if ($value === null) return '';
 	return htmlentities($value);
 }
+
+function vide($truc){
+    if (empty($truc)) return 0;
+    else return $truc;
+}
+
+function admin($north, $south, $est, $west, $i = 0){
+	if(empty($north) && empty($south) && empty($est) && empty($west)) {
+        $a = [
+            'n' => $i,
+            's' => $i,
+            'e' => $i,
+            'w' => $i
+        ];
+    }
+    else{
+        $a = [
+            'n' => vide($north),
+            's' => vide($south),
+            'e' => vide($est),
+            'w' => vide($west)
+        ];
+	}
+	return json_encode($a);
+}

@@ -1,0 +1,56 @@
+@media screen and (min-width:500px) {
+    .about-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .about-right{
+        width: 35%;
+    }
+    .about-left{
+        margin-bottom: 0;
+        width: 60%;
+    }
+}
+/**
+ *	Mode tablette
+ */
+ @media screen and (min-width:700px) {
+	section.info{
+        padding: 100px 0;
+    }
+    .link-secondary{
+        margin-top: 0px;
+    }
+    .articles{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .article{
+        max-width: 49%;
+        margin: 0 0 20px;
+    }
+    .credit{
+        flex-basis: 50%;
+
+        .link-credit{
+            width: 50%;
+        }
+    }
+    .copyright{
+        flex-basis: 50%;
+    }
+}
+/**
+ *	Mode PC
+ */
+ @media screen and (min-width:1024px) {
+	.article{
+        max-width: 32%;
+    }
+    .credit{
+        a.link-credit{
+            width: 33.33%;
+        }
+    }
+}

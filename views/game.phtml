@@ -1,0 +1,55 @@
+<?php
+ob_start();
+	$title = 'Mini jeu';
+?>
+<main id="game" class="container-game">
+		<section id="img-view" class="game-view">
+			<img src="/images/game/<?= $view; ?>" alt="">
+		</section>
+		
+		<section class="game-admin">
+			<div class="game-admin-rose">
+				<img src="/images/game/admin/rose_<?= $oSessions::getDirection(); ?>.png" alt="">
+			</div>
+			
+			<div class="game-admin-moving">
+				<div class="img-diretion">
+					<?php if($position['jump'][$oSessions::getDirection()] !== 0): 
+						if ($position['moving'][$oSessions::getDirection()] != 0): ?>
+								<a href="/game/moving-<?= $position['moving'][$oSessions::getDirection()]; ?>">
+						<?php else: ?>
+							<a href="/game/jump-<?= $position['jump'][$oSessions::getDirection()]; ?>">
+						<?php endif; ?>
+								<img id="forward" src="/images/game/admin/f.png" alt="Avancer" title="Avancer">
+							</a>
+					<?php endif; ?>
+				</div>
+				<div id="left" class="img-diretion" data="<?= $oActions->turnLeft($oSessions::getDirection()); ?>">
+					<?php if($position['view'][$oActions->turnLeft($oSessions::getDirection())] !== 0): ?>
+						<a href="/game/turn-<?= $oActions->turnLeft($oSessions::getDirection()); ?>">
+							<img src="/images/game/admin/l.png" alt="Tourner sur la gauche" title="Tourner sur la gauche">
+						</a>
+					<?php endif; ?>
+				</div>
+				<div id="behind" class="img-diretion" data="<?= $oActions->return($oSessions::getDirection()); ?>">
+					<?php if($position['view'][$oActions->return($oSessions::getDirection())] !== 0): ?>
+						<a href="/game/turn-<?= $oActions->return($oSessions::getDirection()); ?>">
+							<img src="/images/game/admin/t.png" alt="Faire demis tour" title="Faire demis tour">
+						</a>
+					<?php endif; ?>
+				</div>
+				<div id="right" class="img-diretion" data="<?= $oActions->turnRight($oSessions::getDirection()); ?>">
+					<?php if($position['view'][$oActions->turnRight($oSessions::getDirection())] !== 0): ?>
+						<a href="/game/turn-<?= $oActions->turnRight($oSessions::getDirection()); ?>">
+							<img src="/images/game/admin/r.png" alt="Tourner sur la droite" title="Tourner sur la droite">
+						</a>
+					<?php endif; ?>
+				</div>
+			</div>
+		</section>
+		
+</main>
+				<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

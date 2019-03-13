@@ -7,7 +7,7 @@ use \src\core\Flash;
 $oCalendar = new Calendar($_GET['month'] ?? null, $_GET['year'] ?? null);
 $oEvents = new Events();
 
-$css='<link rel="stylesheet" href="/css/calendar.css">';
+$css='<link rel="stylesheet" href="/css/portfolio/calendar.css">';
 
 $dateMonthYear = $oCalendar->getDate();
 $start = $oCalendar->getFirstDay();

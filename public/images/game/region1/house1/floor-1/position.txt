@@ -1,0 +1,31 @@
+region1 house1 floor-1
+
+		[a0]
+		+
+		3.0	
+
+				[a1]	[a2]
+	[1]	+		+		+
+		2.0		2.1		2.2
+
+			[a3]+[a4]	+[a5]
+				1.1		1.2
+		
+	[a6]+[a7]	+		+	
+		0.0		0.1		0.2
+		[a8]	[a9]	[a10]
+
+
+[1]		region1 house1 floor99 1.0	(1:1:99:1.0)
+
+[a0]	action (7:0)	Histoire
+[a1]	action (4:1)	Bibliotèque
+[a2]	action (4:2)	Bibliotèque
+[a3]	action (0:0)	Save
+[a4]	action (5:1)	Commande téléporteur
+[a5]	action (6:1)	Téléporteur
+[a6]	action (3:0)	Fourneau
+[a7]	action (3:2)	Forge
+[a8]	action (3:1)	Alchimie
+[a9]	action (2:1)	Coffre
+[a10]	action (2:2)	Coffre

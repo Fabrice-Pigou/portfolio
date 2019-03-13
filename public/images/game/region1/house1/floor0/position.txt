@@ -1,0 +1,25 @@
+region1 house1 floor0
+
+		[1]	+
+			4.1		
+	[a1]
+	+		+		+
+	3.0		3.1		3.2
+
+[a2]+				+	[a3]
+	2.0				2.2
+			[2]
+	+		+		+
+	1.0		1.1		1.2
+	
+			+
+			0.1	
+			[3]
+
+[1] region1 house1 floor99 6.0	(1:1:99:6.0)
+[2] region1 house1 floor98 1.0	(1:1:98:1.0)
+[3] region1 house0 floor0 3.3	(1:0:0:3.3)
+
+[a1] action (1:1) pnj
+[a2] action (0:0) save
+[a3] action (3:0) artisanat

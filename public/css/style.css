@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 /**
  *	font-family: 'Lobster', cursive;
- *	font-family: 'Merriweather', serif; 
+ *	font-family: 'Merriweather', serif;
  *	font-family: 'Slabo 27px', serif;
  **/
 
@@ -31,7 +31,7 @@
 	--bg-info: rgba(0, 200, 200, 1);
 	--bg-warning: rgba(200, 200, 0, 1);
 }
-/* 
+/*
  * Debug
  */
 .xdebug-var-dump{
@@ -108,8 +108,25 @@ pre.erreur{
     background-color: var(--bg-warning);
 }
 /**
- *	Mode PC
+ *	Mode tablette
  */
+ @media screen and (min-width:700px) {
+	a.model{
+		width: 50%;
+	}
+}
+/**
+*	Mode PC
+*/
 @media screen and (min-width:1024px) {
-	
+	a.model{
+		width: 33.33%;
+	}
+	.separator::before{
+		content: " | ";
+		display: block;
+		color: white;
+		padding-top: 5px;
+		border-bottom: none;
+	}
 }

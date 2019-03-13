@@ -1,12 +1,13 @@
 .language{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .language h2{
     flex-basis: 100%;
 }
 a.model{
-    flex-basis: 33.33%;
+    max-width: 500px;
     padding: 20px;
     text-decoration: none;
     color: var(--color);
@@ -16,7 +17,7 @@ div.model-content{
     border-radius: 8px;
 }
 div.model-content img{
-    
+    max-width: 100%;
 }
 .luth-detail{
     max-width: 600px;

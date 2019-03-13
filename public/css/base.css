@@ -20,7 +20,8 @@
 .red{
 	color: red;
 }
-.separator{
-	color: white;
-	padding-top: 5px;
+.separator::before{
+	content: "";
+	display: block;
+	border-bottom: 1px solid #fff;
 }

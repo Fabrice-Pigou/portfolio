@@ -1,0 +1,140 @@
+/* Contenu du site */
+.responsive-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* HEADER */
+.about{
+    margin-top: -195px;
+    padding: 20px 0;
+    background-color: $color-1;
+    color: #fff;
+    transition: margin-top .3s;
+
+    h4{
+        color: #fff;
+    }
+    p{
+        color: rgba(#fff, .7)
+    }
+    ul{
+        padding: 15px 0;
+    }
+}
+.with-about{
+    margin-top: 0;
+    transition: margin-top .3s;
+}
+.about-left{
+    margin-bottom: 40px;
+}
+.top-nav{
+    width: 100%;
+    background-color: $color-1;
+    color: rgba($color: #fff, $alpha: .6);
+    font-size: 2rem;
+
+    a:hover{
+        color: #fff;
+    }
+}
+.top-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    button{
+        font-size: 2.2rem;
+    }
+}
+/* MAIN */
+section.info{
+    text-align: center;
+    padding: 40px 0;
+    font-size: 2rem;
+}
+.link-main, .link-secondary{
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.link-main{
+    background-color: $color-3;
+}
+.link-main:hover{
+    background-color: darken($color-3, 20);
+}
+.link-secondary{
+    background-color: $color-4;
+    margin-top: 20px;
+}
+.link-secondary:hover{
+    background-color: darken($color-4, 10);
+}
+
+.article{
+    max-width: 500px;
+    margin: 0 auto 20px;
+
+    img{
+        width: 100%;
+    }
+}
+.article-body{
+    box-shadow: 1px 1px 4px $color-2;
+    padding: 10px;
+    margin-top: -3px;
+}
+.article-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button:hover{
+        background-color: $color-2;
+        color: #fff;
+    }
+}
+.btn-left{
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+}
+.btn-right{
+    border-radius: 0 3px 3px 0;
+}
+/* FOOTER */
+footer.footer{
+    background-color: $color-2;
+    width: 100%;
+    padding: 10px 0;
+}
+nav.down-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    a{
+        color: $color-1;
+    }
+}
+.credit{
+    flex-basis: 100%;
+
+    h3{
+        flex-basis: 100%;
+    }
+}
+.copyright{
+    flex-basis: 100%;
+}
+.link-credit{
+    display: inline-block;
+    width: 100%;
+}

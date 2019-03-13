@@ -1,0 +1,65 @@
+<?php
+ob_start();
+	$title = 'Responsive web design';
+?>
+<main>
+
+	<section class="info">
+		<div class="responsive-container">
+			<h1 class="">Album example</h1>
+			<p class="">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo incidunt officia, facere esse eveniet ipsum ab vel error sapiente nemo perferendis doloremque nisi possimus velit. Reiciendis eius cumque quia error incidunt dignissimos! Deleniti, odio ex, aspernatur minus modi aliquid provident beatae ad architecto culpa aperiam exercitationem aliquam corrupti possimus placeat.
+			</p>
+			<p>
+				<a href="#" class="link-main">Main call to action</a>
+				<a href="#" class="link-secondary">Secondary action</a>
+			</p>
+		</div>
+	</section>
+
+	<div class="responsive-container articles">
+				<?php for ($i=0; $i < 6; $i++): ?>
+					<article class="article">
+						<img class="" src="/images/mini/<?= $i; ?>.jpg" alt="Card image cap">
+						<section class="article-body">
+							<p class="article-p">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut blanditiis non placeat voluptatem iure iusto, impedit commodi eos optio debitis nostrum assumenda exercitationem. Aut blanditiis dolorem, quia consectetur eum optio.
+							</p>
+							<footer class="article-footer">
+								<div class="">
+									<button type="button" class="btn-left">View</button><!--
+								 --><button type="button" class="btn-right">Edit</button>
+								</div>
+								<small class=""><?= ceil(($i * 15) / ($i + 1) + (($i + 2) * 2) ); ?> mins</small>
+							</footer>
+						</section>
+					</article>
+				<?php endfor; ?>
+	</div>
+
+	<footer class="footer">
+		<nav class="down-nav responsive-container">
+			<div class="credit">
+				<h3>Crédit</h3>
+				<a class="link-credit" href="https://unsplash.com/@gregbulla">Greg Bulla</a><!--
+			 --><a class="link-credit" href="https://unsplash.com/@kevin_1658">Kevin Grieve</a><!--
+			 --><a class="link-credit" href="https://unsplash.com/@ibrahimmushan">Ibrahim Mushan</a><!--
+			 --><a class="link-credit" href="https://unsplash.com/@introspectivedsgn">Erik Mclean</a><!--
+			 --><a class="link-credit" href="https://unsplash.com/@march08">Roman Nguyen</a><!--
+			 --><a class="link-credit" href="https://unsplash.com/@ts_imagery">Trent Szmolnik</a>
+			</div>
+			<div class="copyright">
+				&#169;2008-<?php echo date('Y'); ?> 
+				<a class="footer-a" href="https://www.goupy.eu">Goupy.eu</a> Production.
+				<br/>
+				Tous droits réservés.
+			</div>
+		</nav>
+	</footer>
+
+</main>
+
+<?php
+$content = ob_get_clean();
+include('../views/template/template.phtml');
+?>

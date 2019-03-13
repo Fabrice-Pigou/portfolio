@@ -1,0 +1,48 @@
+body{
+    background: url('/images/game/admin/background.jpg') top center ;
+}
+label{
+    text-align: center;
+    width: 100%;
+}
+fieldset{
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+}
+legend{
+    font-size: 3rem;
+    width: auto;
+}
+.admin-left,.admin-right{
+    width: 46%;
+    background-color: rgba(0, 0, 0, .5);
+    color: #eee;
+    margin: 0 2%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.admin-left{
+    float: left;
+}
+.admin-right{
+    float: right;
+    text-align: center;
+}
+.admin-right div{
+    width: 420px;
+    height: 225px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.admin-right div:first-child,
+.admin-right div:last-child{
+    display: block;
+    margin: 0 auto;
+}
+.admin-right img{
+    width: 420px;
+    height: 225px;
+    border-radius: 5px;
+}
